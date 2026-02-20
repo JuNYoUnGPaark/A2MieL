@@ -7,7 +7,30 @@ This repository implements the methodology proposed in the paper "Physics-Derive
 
 
 ## Paper Overview
-**Abstract**: 
+**Abstract**: Current deep-learning human activity recognition
+(HAR) models typically fuse physics-derived signals in a static
+manner, which can undermine robustness: first-order motion
+dynamics (rate/power) and second-order structural transitions
+(phase/jerk) encode complementary, different-order information
+and are degraded asymmetrically under real-world sensor distortions.
+To address this, we present an Energy-Inspired Landscape
+Modeling framework augmented with an Attention-to-
+Attention (A2) reconciliation mechanism. Our method injects
+energy-based inductive biases—drawing on kinetic and potential
+energy concepts—to regularize the latent geometry of inertial
+signals and to produce complementary Rate and Phase feature
+views. The A2 module explicitly separates first- and second-order
+energy derivatives into Power and Jerk proxies and performs
+context-conditioned reconciliation: it infers per-cue reliability
+from the joint consideration of attention scores and feature
+magnitudes (rather than predicting a separate confidence head)
+and dynamically calibrates each view’s contribution. Extensive
+experiments on five public benchmarks (UCI-HAR, WISDM, MotionSense,
+MHEALTH, and PAMAP2) demonstrate a favorable
+accuracy–efficiency trade-off (peak F1 = 0.9974 on MotionSense),
+substantially improved stability under sensor perturbations, and
+practical on-device efficiency (≈ 0.07M parameters; avg. latency
+≈ 3.1 ms on a desktop CPU; 18.88 ms on Raspberry Pi 4B).
 
 ## Dataset
 - **UCI-HAR** dataset is available at _https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones_
